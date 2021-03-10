@@ -1,0 +1,34 @@
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../Photo/header1.png");
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.header-title {
+  font-weight: 600 !important;
+  font-size: 2.1rem;
+}
+.dark-container {
+  color: white;
+  background: #f1f6f9;
+  min-height: 80vh;
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.8rem;
+  }
+  .header {
+    height: 30vh;
+  }
+}
+@media (max-width: 576px) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+  .header {
+    height: 25vh;
+  }
+}

@@ -1,0 +1,29 @@
+.icons ul {
+  margin: 0;
+  padding: 0;
+}
+.icons ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+.icons ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  display: block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-twitter {
+  background: #1da1f2;
+}
+.icon-facebook {
+  background: #3b5998;
+}
+.icon-youtube {
+  background: #ff0000;
+}

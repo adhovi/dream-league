@@ -1,0 +1,41 @@
+.my-card {
+  border: none;
+  text-align: center;
+  height: 450px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 100px rgba(149, 215, 255, 0.1);
+}
+.my-card img {
+  margin: 0 auto;
+  width: 50%;
+}
+.my-title {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.my-text {
+  color: #656565;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.my-btn {
+  /* background-color: rgb(255, 0, 0); */
+  background-color: #f4135f;
+  padding: 9px 27px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 4px 20px 2px rgba(242, 22, 99, 0.3);
+  transition: 0.3s;
+}
+.my-btn:hover {
+  background-color: #3a42ff;
+  box-shadow: 0px 4px 20px 2px rgba(58, 64, 255, 0.3);
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+  .my-card {
+    height: 370px;
+  }
+}

@@ -1,0 +1,24 @@
+.details {
+  background-color: #f4135f;
+  border-radius: 20px;
+}
+.details img {
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+.details h4 {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.details p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+}
+.icons {
+  font-size: 25px;
+}
+.icons-last {
+  font-size: 30px;
+}
