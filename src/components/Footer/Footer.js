@@ -6,6 +6,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 const Footer = (props) => {
   const { strTwitter, strFacebook, strYoutube } = props.league;
@@ -15,34 +16,52 @@ const Footer = (props) => {
       <div className="icons mt-5 pb-5">
         <ul className="d-flex justify-content-center ">
           <li>
-            <a
-              className="icon-twitter"
-              href={strTwitter ? `https://${strTwitter}` : `/error`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
+            {strTwitter ? (
+              <a
+                className="icon-twitter"
+                href={`https://${strTwitter}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
+            ) : (
+              <Link className="icon-twitter" to="/error">
+                <FontAwesomeIcon icon={faTwitter} />
+              </Link>
+            )}
           </li>
           <li>
-            <a
-              className="icon-facebook"
-              href={strFacebook ? `https://${strFacebook}` : `/error`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faFacebookF} />
-            </a>
+            {strFacebook ? (
+              <a
+                className="icon-facebook"
+                href={`https://${strFacebook}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faFacebookF} />
+              </a>
+            ) : (
+              <Link className="icon-facebook" to="/error">
+                <FontAwesomeIcon icon={faFacebookF} />
+              </Link>
+            )}
           </li>
           <li>
-            <a
-              className="icon-youtube"
-              href={strYoutube ? `https://${strYoutube}` : `/error`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faYoutube} />
-            </a>
+            {strYoutube ? (
+              <a
+                className="icon-youtube"
+                href={`https://${strYoutube}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faYoutube} />
+              </a>
+            ) : (
+              <Link className="icon-youtube" to="/error">
+                <FontAwesomeIcon icon={faFacebookF} />
+              </Link>
+            )}
           </li>
         </ul>
       </div>
