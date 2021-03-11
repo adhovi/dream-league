@@ -4,6 +4,7 @@ import Description from "../Description/Description";
 import DetailCard from "../DetailCard/DetailCard";
 import Footer from "../Footer/Footer";
 import "./LeagueDetail.css";
+import banner from "../../Photo/header1.png";
 
 const LeagueDetail = () => {
   const { id } = useParams();
@@ -24,7 +25,7 @@ const LeagueDetail = () => {
     strDescriptionFR,
   } = leagueDetail;
 
-  const backGround = `url(${strBanner})`;
+  const backGround = strBanner ? `url(${strBanner})` : `url(${banner})`;
   const [vhHeight, setVhHeight] = useState("40vh");
 
   useEffect(() => {
@@ -35,13 +36,16 @@ const LeagueDetail = () => {
         setVhHeight("30vh");
       } else if (window.screen.width <= 992) {
         setVhHeight("35vh");
+      } else {
+        setVhHeight("40vh");
       }
     };
+    window.addEventListener("load", handleResize);
     window.addEventListener("resize", handleResize);
   }, []);
 
   const bannerHeader = {
-    backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)),${backGround}`,
+    backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.1)),${backGround}`,
     height: `${vhHeight}`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",

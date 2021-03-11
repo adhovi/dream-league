@@ -18,7 +18,7 @@ const DetailCard = (props) => {
     strSport,
     strGender,
   } = props.league;
-  let imageShow = <img className="h-100 w-100 w-md-75" src={male} alt="" />;
+  let imageShow = "";
 
   imageShow =
     strGender === "Female" ? (

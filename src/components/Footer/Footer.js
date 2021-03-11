@@ -17,7 +17,7 @@ const Footer = (props) => {
           <li>
             <a
               className="icon-twitter"
-              href={`https://${strTwitter}`}
+              href={strTwitter ? `https://${strTwitter}` : `/error`}
               target="_blank"
               rel="noreferrer"
             >
@@ -27,7 +27,7 @@ const Footer = (props) => {
           <li>
             <a
               className="icon-facebook"
-              href={`https://${strFacebook}`}
+              href={strFacebook ? `https://${strFacebook}` : `/error`}
               target="_blank"
               rel="noreferrer"
             >
@@ -37,7 +37,7 @@ const Footer = (props) => {
           <li>
             <a
               className="icon-youtube"
-              href={`https://${strYoutube}`}
+              href={strYoutube ? `https://${strYoutube}` : `/error`}
               target="_blank"
               rel="noreferrer"
             >
