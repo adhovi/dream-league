@@ -1,6 +1,9 @@
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./League.css";
+
 const League = (props) => {
   const { idLeague, strLeague, strSport } = props.league;
   const [badge, setBadge] = useState("");
@@ -20,7 +23,12 @@ const League = (props) => {
             <h5 className="card-title my-title">{strLeague}</h5>
             <p className="card-text my-text">Sport type: {strSport}</p>
             <Link to={`/league/${idLeague}`}>
-              <button className="btn btn-primary my-btn mt-2"> Explore</button>
+              <button className="btn btn-primary my-btn mt-2">
+                Explore
+                <span className="ms-1 arrow">
+                  <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
+                </span>
+              </button>
             </Link>
           </div>
         </div>
